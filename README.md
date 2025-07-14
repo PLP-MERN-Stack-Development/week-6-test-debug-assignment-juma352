@@ -1,88 +1,35 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19934988&assignment_repo_type=AssignmentRepo)
-# Testing and Debugging MERN Applications
+# Week 6 Assignment - Testing and Debugging for MERN Application
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
+## Task Overview
 
-## Assignment Overview
+This project focuses on implementing comprehensive testing strategies and debugging techniques for a MERN stack application. The main objectives include:
 
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
+- Setting up testing environments for both client and server using Jest, React Testing Library, Supertest, and Cypress.
+- Writing unit tests for utility functions, React components, middleware, Redux reducers/actions, and custom hooks.
+- Creating integration tests for API endpoints and database operations.
+- Developing end-to-end tests for critical user flows such as registration, login, CRUD operations, navigation, and error handling.
+- Implementing debugging techniques including global error handling middleware on the server, React error boundaries on the client, logging strategies, and performance monitoring.
+- Ensuring high code coverage and application reliability through thorough testing.
 
 ## Project Structure
 
-```
-mern-testing/
-├── client/                 # React front-end
-│   ├── src/                # React source code
-│   │   ├── components/     # React components
-│   │   ├── tests/          # Client-side tests
-│   │   │   ├── unit/       # Unit tests
-│   │   │   └── integration/ # Integration tests
-│   │   └── App.jsx         # Main application component
-│   └── cypress/            # End-to-end tests
-├── server/                 # Express.js back-end
-│   ├── src/                # Server source code
-│   │   ├── controllers/    # Route controllers
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   └── middleware/     # Custom middleware
-│   └── tests/              # Server-side tests
-│       ├── unit/           # Unit tests
-│       └── integration/    # Integration tests
-├── jest.config.js          # Jest configuration
-└── package.json            # Project dependencies
-```
+- `client/`: Contains React client application, components, and client-side tests.
+- `server/`: Contains Express server, API endpoints, middleware, and server-side tests.
+- Testing scripts and dependencies are configured in both client and server package.json files.
+- Test database setup script included for integration testing.
 
-## Getting Started
+## How to Run Tests
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+- Use the provided npm scripts in the client and server directories to run unit, integration, and end-to-end tests.
+- Example commands:
+  - `pnpm --filter ./client test`
+  - `pnpm --filter ./server test`
+  - `pnpm --filter ./client test:e2e` (for Cypress tests)
 
-## Files Included
+## Debugging
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+- Global error handler middleware is implemented on the server.
+- React error boundaries are implemented on the client.
+- Additional debugging tools and strategies can be added as needed.
 
-## Requirements
-
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
-
-## Testing Tools
-
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
-
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
-
-## Resources
-
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+This setup aims to improve the reliability, stability, and maintainability of the MERN application through effective testing and debugging practices.
